@@ -1,4 +1,4 @@
-if (wfProcess == "Application Acceptance" && wfTask == "Accepted - Plan Review Req") {
+if (wfTask == "Application Acceptance" && wfStatus == "Accepted - Plan Review Req") {
 	activateTask("Certificate of Occupancy");
 	showDebug = true;
 }
