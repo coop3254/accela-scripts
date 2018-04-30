@@ -6,5 +6,6 @@ if (wfTask == "Application Acceptance" && wfStatus == "Accepted - Plan Review Re
 }
 
 if (wfTask == "Inspection" && wfStatus == "Failed Inspection") {
-	invoiceFee("PMT_060FAIL", "FINAL");
+	logDebug("working");
+	addFee("PMT_060FAIL", "PMT_GENERAL", "FINAL", 1, "Y");
 }
