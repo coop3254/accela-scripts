@@ -1,14 +1,14 @@
 if (inspType == 'Annual Fire Occupancy' && inspResult == 'Fail Inspection') {
 	closeTask('Annual Inspection', 'Failed Inspection', '', '');
 	activateTask('Reinspection 30 Days');
-	scheduleInspection('Fire Occupancy Reinspection', 30);
+	scheduleInspection('Fire Occupancy Reinspection', 30, 'ADMIN');
 	email('mhopkins@accela.com', 'mhopkins@accela.com', 'Failed Inspection Notice', 'This is an update to notify you on your failed inspection.');
 }
 
 if (inspType == 'Fire Occupancy Reinspection' && inspResult == 'Fail Re-Inspection') {
 	closeTask('Reinspection 30 Days', 'Failed Reinspection', '', '');
 	activateTask('Violation Inspection 15 Days');
-	scheduleInspection('Fire Occupancy Violation Reinspection', 15);
+	scheduleInspection('Fire Occupancy Violation Reinspection', 15, 'ADMIN');
 	addFee("PMT_060FAIL", "PMT_GENERAL", "FINAL", 1, "Y");
 	email('mhopkins@accela.com', 'mhopkins@accela.com', 'Failed Inspection Notice', 'This is an update to notify you on your failed inspection.');
 
