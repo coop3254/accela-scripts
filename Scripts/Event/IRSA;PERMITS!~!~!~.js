@@ -5,7 +5,7 @@ if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail Inspection'
 	emailContact("Inspection Results", "Your inspection " + inspType + " has failed.", "Applicant");
 }
 
-if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail Re-Inspection') {
+if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail ReInspection') {
 	closeTask('Reinspection 30 Days', 'Failed Reinspection', '', '');
 	activateTask('Violation Inspection 15 Days');
 	scheduleInspection('Annual Apartment Inspection', 15, 'ADMIN');
