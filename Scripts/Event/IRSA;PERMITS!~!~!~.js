@@ -1,28 +1,26 @@
-if (inspType == 'Annual Fire Occupancy' && inspResult == 'Fail Inspection') {
+if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail Inspection') {
 	closeTask('Annual Inspection', 'Failed Inspection', '', '');
 	activateTask('Reinspection 30 Days');
-	scheduleInspection('Fire Occupancy Reinspection', 30, 'ADMIN');
-	email('mhopkins@accela.com', 'mhopkins@accela.com', 'Failed Inspection Notice', 'This is an update to notify you on your failed inspection.');
+	scheduleInspection('Annual Apartment Inspection', 30, 'ADMIN');
+	emailContact("Inspection Results", "Your inspection " + inspType + " has failed.", "Applicant");
 }
 
-if (inspType == 'Fire Occupancy Reinspection' && inspResult == 'Fail Re-Inspection') {
+if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail Re-Inspection') {
 	closeTask('Reinspection 30 Days', 'Failed Reinspection', '', '');
 	activateTask('Violation Inspection 15 Days');
-	scheduleInspection('Fire Occupancy Violation Reinspection', 45, 'ADMIN');
+	scheduleInspection('Annual Apartment Inspection', 15, 'ADMIN');
 	addFee("PMT_060FAIL", "PMT_GENERAL", "FINAL", 1, "Y");
-	email('mhopkins@accela.com', 'mhopkins@accela.com', 'Failed Inspection Notice', 'This is an update to notify you on your failed inspection.');
-
-
+	emailContact("Inspection Results", "Your inspection " + inspType + " has failed the re-inspection.", "Applicant");
 }
 
-if (inspType == 'Fire Occupancy Violation Reinspection' && inspResult == 'Fail 2nd Reinspection') {
+if (inspType == 'Annual Apartment Inspection' && inspResult == 'Fail 2nd Reinspection') {
 	closeTask('Violation Inspection 15 Days', 'Failed Violation Inspection', '', '');
 	activateTask('City Attorney');
-	email('mhopkins@accela.com', 'mhopkins@accela.com', 'Failed Inspection Notice', 'This is an update to notify you on your failed inspection.');
-
+	emailContact("Inspection Results", "Your inspection " + inspType + " has failed the second re-inspection.", "Applicant");
 }
 
-if (inspType == 'Annual Fire Occupancy' && inspResult == 'Pass') {
+if (inspType == 'Annual Apartment Inspection' && inspResult == 'Pass') {
 	closeTask('Annual Inspection', 'Passed');
 	activateTask('Final Review');
+	emailContact("Inspection Results", "Your inspection " + inspType + " has passed.", "Applicant");
 }
