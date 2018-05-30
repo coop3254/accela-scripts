@@ -1,14 +1,14 @@
 function sendInspectionResultGuidesheetReport(){
 // Provide the ACA URl - This should be set in INCLUDES_CUSTOM_GLOBALS
-var acaURL = "aca.demo.accela.com/csm"
+var acaURL = "https://civic.demo.accela.com/CLOUD03/"
 // Provide the Agency Reply Email - This should be set in INCLUDES_CUSTOM_GLOBALS
-var agencyReplyEmail = "noreply@accela.com"
+var agencyReplyEmail = "mhopkins@accela.com"
 // Provide the contact types to send this notification
 var contactTypesArray = new Array("Applicant", "Property Owner", "Business Owner");
 // Provide the Notification Template to use
 var notificationTemplate = "MESSAGE_INSPECTION_RESULT_GUIDESHEET";
 // Provide the name of the report from Report Manager
-var reportName = "Inspection Results with Guidesheet";
+var reportName = "LA Fire Guidesheet";
 // Get an array of Contact Objects using Master Scripts 3.0
 var contactObjArray = getContactObjs(capId,contactTypesArray);
 // Set the report parameters. For Ad Hoc use p1Value, p2Value etc.
