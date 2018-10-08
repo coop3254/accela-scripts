@@ -1,4 +1,4 @@
-if parcelConditionExistsASB("Historical") {
+if (parcelConditionExistsASB("Historical")) {
 	cancel = true;
 	showMessage = true;
 }
