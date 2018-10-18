@@ -9,4 +9,5 @@ if (wfTask == "Inspection" && wfStatus == "Failed Inspection") {
 
 if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
 	addFee("PMT_001", "PMT_GENERAL", "FINAL", 4, "Y");
+	email("mhopkins@accela.com","mhopkins@accela.com","Permit Ready","Your permit has been issued and is ready for pickup.");
 }
