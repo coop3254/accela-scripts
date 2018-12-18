@@ -13,5 +13,5 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
 
 if (appMatch('Permits/Commercial/New/NA') && wfTask == "Application Submittal" && wfStatus == "Accepted - Plan Review Req") {
 	activateTask("Fire Review");
-	email("ccooper@accela","airkulla@accela.com","Fire Review Ready","Please perform the necessary tasks on the Fire Review process.");
+	email("airkulla@accela.com","mhopkins@accela.com","Fire Review Ready","Please perform the necessary tasks on the Fire Review process.");
 }
