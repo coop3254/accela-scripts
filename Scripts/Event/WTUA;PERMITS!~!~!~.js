@@ -14,7 +14,11 @@ if (wfTask == "Permit Issuance" && wfStatus == "Issued") {
 if (appMatch('Permits/Commercial/New/NA') && wfTask == "Application Submittal" && wfStatus == "Accepted - Plan Review Req") {
 	activateTask("Fire Review");
 	activateTask("Building Review");
-	closeTask("Plans Distribution");
-	closeTask("Application Submittal");
+	closeTask("Plans Distribution", "Routed for Review");
+	closeTask("Application Submittal", "Accepted - Plan Review Req");
+	closeTask("Zoning Review", "Closed");
+	closeTask("Public Works Review", "Closed");
+	closeTask("Mechanical Review", "Closed");
+	closeTask("Electrical Review", "Closed");
 	email("airkulla@accela.com","ccooper@accela.com","Fire Review Ready","Please perform the necessary tasks on the Fire Review process.");
 }
