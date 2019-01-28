@@ -1,0 +1,52 @@
+{
+  "Licenses/Marijuana/Retail Product Manufacturer/Application": {
+    "WorkflowTaskUpdateAfter": [
+      {
+        "preScript": "",
+        "metadata": {
+          "description": "License Issuance",
+          "operators": {
+
+          }
+        },
+        "criteria": {
+          "task": [
+            "City Application Intake"
+          ],
+          "status": [
+            "Additional Info Required"
+          ]
+        },
+        "action": {
+          "parentLicense": "Licenses/Marijuana/Retail Product Manufacturer/License",
+          "issuedStatus": "Active",
+          "copyCustomFields": [
+            "ALL"
+          ],
+          "copyCustomTables": [
+            "ALL"
+          ],
+          "copyCT": false,
+          "copyEducation": false,
+          "copyContinuingEducation": false,
+          "copyExamination": false,
+          "copyContacts": [
+            "ALL"
+          ],
+          "expirationType": "Days",
+          "originationDate": "File Date",
+          "customExpirationFunction": "",
+          "expirationPeriod": "365",
+          "refLPType": "Retail",
+          "contactType": "Applicant",
+          "contactAddressType": "Mailing",
+          "createLP": false,
+          "licenseTable": "TEST TABLE",
+          "childLicense": "Licenses/Marijuana/Retail Product Manufacturer/License",
+          "recordIdField": "LIC Id"
+        },
+        "postScript": ""
+      }
+    ]
+  }
+}
