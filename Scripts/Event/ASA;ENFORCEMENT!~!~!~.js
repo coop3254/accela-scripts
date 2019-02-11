@@ -8,4 +8,7 @@ if (appMatch('Enforcement/Incident/Abatement/Weeds')) {
 
 if((appMatch('Enforcement/*/*/*')) {
 	addFee("ENF-20", "ENF_GENERAL", "FINAL", 1, "Y");
+	showMessage = true; 
+  	showDebug = true;
+	logDebug(pcs);
 }
