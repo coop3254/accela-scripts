@@ -1,9 +1,10 @@
 if (wfTask == "Rezoning Final" && wfStatus == "Approved") {
 logDebug("Creating child records!");
-createChild("Permits","Grading","NA","NA", editAppName(appTypeAlias));
-createChild("Permits","Public Works","Encroachment","Permit", editAppName(appTypeAlias));
-createChild("Permits","Commercial","New","NA", editAppName(appTypeAlias));
-createChild("Permits","Commercial","Electrical","NA", editAppName(appTypeAlias));
-createChild("Permits","Fire","Suppression","Wet", editAppName(appTypeAlias));
+logDebug(editAppName(appTypeAlias));
+createChild("Permits","Grading","NA","NA","Grading Permit");
+createChild("Permits","Public Works","Encroachment","Permit","Encroachment Permit");
+createChild("Permits","Commercial","New","NA","Commercial New Building Permit");
+createChild("Permits","Commercial","Electrical","NA","Commercial Electrical Permit");
+createChild("Permits","Fire","Suppression","Wet","Fire Suppression Permit");
 copyAppSpecific(capId);
 }
